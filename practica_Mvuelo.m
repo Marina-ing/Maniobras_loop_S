@@ -187,7 +187,7 @@ fprintf('\n');
 
 CD_req = CD0 + k * CL_req.^2;
 D_req  = q * S * CD_req;
-T_req  = D_req + W * sin(phi);
+T_req  = D_req + W * abs(sin(phi));
 
 Ps     = V * (T_max - T_req) / W;   % [m/s]  Potencia de exceso específica
 
